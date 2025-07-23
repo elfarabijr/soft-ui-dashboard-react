@@ -28,11 +28,11 @@ import SoftTypography from "components/SoftTypography";
 import typography from "assets/theme/base/typography";
 
 function Footer({ company, links }) {
-  const { href, name } = company;
+  const { href, name } = company || {};
   const { size } = typography;
 
   const renderLinks = () =>
-    links.map((link) => (
+    links?.map((link) => (
       <SoftBox key={link.name} component="li" px={2} lineHeight={1}>
         <Link href={link.href} target="_blank">
           <SoftTypography variant="button" fontWeight="regular" color="text">

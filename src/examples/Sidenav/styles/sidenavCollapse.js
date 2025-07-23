@@ -62,7 +62,7 @@ function collapseIconBox(theme, ownerState) {
   return {
     background: () => {
       if (active) {
-        return color === "default" ? info.main : palette[color].main;
+        return color === "default" ? info?.main : palette[color]?.main;
       }
 
       return light.main;
@@ -89,7 +89,7 @@ function collapseIconBox(theme, ownerState) {
         } else if (color === "warning") {
           background = gradients.warning.main;
         } else {
-          background = palette[color].main;
+          background = palette[color]?.main;
         }
 
         return background;
