@@ -54,6 +54,9 @@ import SpaceShip from "examples/Icons/SpaceShip";
 import CustomerSupport from "examples/Icons/CustomerSupport";
 import CreditCard from "examples/Icons/CreditCard";
 import Cube from "examples/Icons/Cube";
+import { GetAppRounded } from "@mui/icons-material";
+import DetailLayanan from "layouts/layananpublic/detaillayanan";
+import AuthLayanan from "layouts/layananpublic/authlayanan";
 
 const routes = [
   {
@@ -127,6 +130,24 @@ const routes = [
     route: "/authentication/sign-up",
     icon: <SpaceShip size="12px" />,
     component: <SignUp />,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
+    name: "Registrasi",
+    key: "registrasi",
+    route: "/login",
+    icon: <SpaceShip size="12px" />,
+    component: <AuthLayanan />,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
+    name: "Detail Layanan",
+    key: "detail-layanan",
+    route: "/services/:id",
+    icon: <GetAppRounded size="12px" />,
+    component: <DetailLayanan />,
     noCollapse: true,
   },
 ];

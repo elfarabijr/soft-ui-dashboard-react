@@ -69,10 +69,11 @@ function SoftUIControllerProvider({ children }) {
     transparentSidenav: true,
     sidenavColor: "info",
     transparentNavbar: true,
-    fixedNavbar: true,
+    fixedNavbar: false,
     openConfigurator: false,
     direction: "ltr",
-    layout: "dashboard",
+    layout: "page",
+    // layout: "dashboard",
   };
 
   const [controller, dispatch] = useReducer(reducer, initialState);
